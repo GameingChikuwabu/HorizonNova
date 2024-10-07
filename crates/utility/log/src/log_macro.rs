@@ -1,12 +1,16 @@
 #[macro_export]
 macro_rules! debug_log {
     ($($arg:tt)*) => {
-        $crate::log_system::log(
-            $crate::log_level::LogLevel::Debug,
-            &format!("[{}:{}]\n {}", file!(), line!(), format!($($arg)*))
-        );
+        #[cfg(debug_assertions)]
+        {
+            $crate::log_system::log(
+                $crate::log_level::LogLevel::Debug,
+                &format!("[{}:{}]\n {}", file!(), line!(), format!($($arg)*))
+            );
+        }
     };
 }
+
 
 #[macro_export]
 macro_rules! warn_log {
