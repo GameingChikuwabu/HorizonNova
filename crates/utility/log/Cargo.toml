@@ -5,3 +5,7 @@ edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
+
+[features]
+default = ["default_logger"]
+default_logger = []
