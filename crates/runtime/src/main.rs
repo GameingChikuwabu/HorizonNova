@@ -1,4 +1,7 @@
+use log::*;
+
 fn main() {
-    
-    println!("Hello, world!");
+    debug_log!("debug message");
+    error_log!("error message");
+    warn_log!("warn message");
 }

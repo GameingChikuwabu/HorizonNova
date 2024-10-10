@@ -14,4 +14,3 @@ pub(crate) static GLOBAL_LOGGER: LazyLock<RwLock<Box<dyn Logger>>> = LazyLock::n
         RwLock::new(Box::new(ConsoleLogger::new()))
     }
 });
-
