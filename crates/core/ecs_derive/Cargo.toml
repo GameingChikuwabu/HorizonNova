@@ -1,5 +1,5 @@
 [package]
-name = "error"
+name = "ecs_derive"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
@@ -7,6 +7,7 @@ rust-version.workspace = true
 [dependencies]
 syn = "2"
 quote = "1"
+
 
 [lib]
 proc-macro = true

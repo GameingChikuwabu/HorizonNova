@@ -1,14 +1,10 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+mod impls{
+    pub mod error_macros;
 }
+use proc_macro::TokenStream;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[proc_macro_derive(Error,attributes(error))]
+pub fn derive_error(input: TokenStream) -> TokenStream {
+    crate::impls::error_macros::derive_error_impl(input)
 }

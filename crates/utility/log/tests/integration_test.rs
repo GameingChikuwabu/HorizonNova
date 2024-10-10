@@ -19,7 +19,7 @@ mod tests {
 
         log_system::clear_log();
 
-        let info_logs = log_system::get_log(log_level::LogLevel::Debug);
+        let info_logs: Vec<String> = log_system::get_log(log_level::LogLevel::Debug);
 
         assert_eq!(info_logs.len(),0);
 
