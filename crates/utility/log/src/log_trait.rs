@@ -12,7 +12,6 @@ pub trait Logger : Send + Sync {
 
     /// ログをファイルに保存する
     /// 
-    /// # Arguments
     fn save_log_file(&self);
 
     /// ログを取得する
