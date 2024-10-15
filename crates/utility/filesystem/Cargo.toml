@@ -5,3 +5,9 @@ edition.workspace = true
 rust-version.workspace = true
 
 [dependencies]
+error = {path = "../error"}
+
+[target.'cfg(target_os = "android")'.dependencies]
+jni = "0.21.1"  # RustでJNIを扱うためのクレート
+ndk = "0.9.0"   # Android NDKを扱うためのクレート
+ndk-sys = "0.6.0+11769913"

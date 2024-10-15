@@ -1,14 +1,7 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+pub mod filesystem_hal;
+pub mod filesystem_error;
+pub mod fs_cross;
+pub mod impls{
+    pub mod local_filesystem;
 }
-
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+pub mod filesystem_handler;
